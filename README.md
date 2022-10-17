@@ -46,7 +46,7 @@ root
 - ‘unit_test.py’ is the script that runs all tests.
 
 ## Endpoints  
-### Step 1: Create a prediction endpoint in prediction.py
+### Step 1: Create a prediction endpoint in predict.py
 - I initialized the API as a blueprint instead of a Flask app and called it “prediction_api”.
 ### Step 2: Register the endpoint in app.py
 - Now that we have the prediction.py file to deal with the endpoint code, we can simply import the blueprint and use it in the Flask app.
@@ -54,7 +54,7 @@ root
 ## Models
  I exported model and preprocessing variables as pickle file i.e 'model.pkl', ‘imputer.pkl’ and ‘scaler.pkl’ from the Notebook provided and used in ‘data_preprocessing.py’ and predict.py
 
-## Test (unit testing)(test_prediction.py)
+## Test (unit testing)(test_prediction_api.py)
 ### Step 1: Write tests
 - I registered prediction_api blueprint, defined in predict.py
 - Later, I stored the app.test_client() in a local variable called “tester”. This will give us access to the API, as if we are hitting it with actual traffic.
